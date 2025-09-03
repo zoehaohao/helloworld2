@@ -1,0 +1,12 @@
+<template>
+    <div class="slds-p-around_medium slds-text-align_center">
+        <lightning-button 
+            label="Click Me" 
+            variant="brand" 
+            onclick={handleClick}>
+        </lightning-button>
+        <div if:true={showMessage} class="slds-p-top_medium slds-text-heading_medium">
+            Hello World
+        </div>
+    </div>
+</template>
