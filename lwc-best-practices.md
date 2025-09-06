@@ -1,61 +1,39 @@
-# Lightning Web Components Best Practices
+# Lightning Web Component Best Practices
 
-## 1. Component Design
-- Keep components small and focused on a single responsibility
-- Use composition to build complex functionality
-- Follow the Single Responsibility Principle
+## Component Design
+1. Keep components small and focused on a single responsibility
+2. Use composition to build complex UIs from simple components
+3. Follow the SOLID principles in component design
+4. Implement proper error handling and loading states
 
-## 2. Performance Optimization
-- Minimize the use of framework features that trigger rerenders
-- Use `@track` only when necessary
-- Cache expensive computations using getters
+## Performance
+1. Minimize the use of frameworks and external libraries
+2. Use lazy loading for components that aren't immediately needed
+3. Optimize rendering by using getters instead of computed properties
+4. Cache expensive computations and API results
 
-## 3. Event Handling
-- Use custom events for child-to-parent communication
-- Implement proper event bubbling and composition
-- Add proper event prevention when needed
+## Data Management
+1. Use @track only when necessary for complex objects
+2. Implement proper data validation before sending to server
+3. Handle loading and error states for all data operations
+4. Use reactive properties efficiently
 
-## 4. Data Management
-- Use `@wire` adapters for data retrieval when possible
-- Implement proper error handling for all data operations
-- Cache data appropriately to minimize server calls
+## Event Handling
+1. Use custom events for child-to-parent communication
+2. Implement proper event bubbling and composition
+3. Handle all possible event scenarios and edge cases
 
-## 5. Security Best Practices
-- Never store sensitive information in client-side code
-- Implement proper CRUD and FLS checks in Apex controllers
-- Validate all inputs both client-side and server-side
+## New Best Practices
+1. Component Communication Patterns
+   - Use a clear and consistent pattern for component communication
+   - Document all public methods and properties
+   - Implement proper event propagation
+   - Use message channels for sibling component communication
+   - Avoid tightly coupled components
 
-## 6. Accessibility
-- Use proper ARIA labels and roles
-- Ensure keyboard navigation works correctly
-- Follow WCAG 2.1 guidelines
-
-## 7. Error Handling
-- Implement comprehensive error handling
-- Provide meaningful error messages to users
-- Log errors appropriately for debugging
-
-## 8. Code Organization
-- Use meaningful names for methods and properties
-- Group related functionality together
-- Comment complex logic and business rules
-
-## 9. Testing
-- Write comprehensive Jest tests
-- Test both success and error scenarios
-- Mock external dependencies appropriately
-
-## 10. Documentation
-- Document public methods and properties
-- Include usage examples in component documentation
-- Keep documentation up-to-date with changes
-
-## 11. Reactive Properties
-- Use `@api` for public properties
-- Implement getters for computed values
-- Avoid mutating props received from parent components
-
-## 12. UI/UX Considerations
-- Follow SLDS design patterns
-- Ensure responsive design works across devices
-- Provide appropriate loading states
+2. Security Best Practices
+   - Always validate and sanitize user input
+   - Use with sharing for Apex controllers
+   - Implement proper CRUD and FLS checks
+   - Avoid storing sensitive data in client-side storage
+   - Use Lightning Locker Service compatible code
