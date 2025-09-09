@@ -1,0 +1,20 @@
+{
+  "minMuleVersion": "4.4.0",
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "order-api",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "api/order-api.raml",
+        "mule/order-api.xml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}
