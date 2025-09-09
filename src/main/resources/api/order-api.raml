@@ -1,0 +1,38 @@
+#%RAML 1.0
+title: Order Details API
+version: v1
+baseUri: http://mydomain
+mediaType: application/json
+
+/order:
+  post:
+    queryParameters:
+      orderID:
+        type: string
+        required: true
+        description: The unique identifier for the order
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "orderID": "ORD123",
+                "productName": "Sample Product",
+                "purchaseDate": "2023-12-20",
+                "status": "DELIVERED"
+              }
+      404:
+        body:
+          application/json:
+            example: |
+              {
+                "message": "Order not found"
+              }
+      400:
+        body:
+          application/json:
+            example: |
+              {
+                "message": "Invalid order ID format"
+              }
