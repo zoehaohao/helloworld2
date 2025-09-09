@@ -1,0 +1,8 @@
+http:
+  port: "8081"
+  host: "0.0.0.0"
+
+api:
+  id: "18791234"
+  name: "order-details-api"
+  version: "1.0.0"
